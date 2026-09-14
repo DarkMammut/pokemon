@@ -1,43 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  /* Arrière-plans et textes de base */
-  --background: #f8f9fa;        /* Blanc cassé léger (#F8F9FA) */
-  --foreground: #1a1a1a;        /* Noir charbon / Texte principal (#1A1A1A) */
-  --muted: #64748b;             /* Gris acier pour texte secondaire (#64748B) */
+  /* Arrière-plans et textes de base (Mode Clair) */
+  --background: #f4f6f9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --foreground: #1e293b;
+  --muted: #64748b;
 
-  /* Palette de couleurs inspirée de Pokémon */
-  --primary: #2b67b1;           /* Bleu Pokémon (#2B67B1) */
-  --secondary: #ffcb05;         /* Jaune Pikachu (#FFCB05) */
-  --accent: #ee1515;            /* Rouge Pokéball (#EE1515) */
+  /* Palette Pokémon harmonisée (Mode Clair) */
+  --primary: #2a52be;
+  --primary-foreground: #ffffff;
+
+  --secondary: #d97706;
+  --secondary-foreground: #ffffff;
+
+  --accent: #e11d48;
+  --accent-foreground: #ffffff;
 }
 
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #f0f0f0;
-    --primary: #3c78c8;
-    --muted: #94a3b8;
-  }
-}
-
+/* Mode sombre piloté par la classe .dark */
 .dark {
-  --background: #121212;
-  --foreground: #f0f0f0;
-  --primary: #3c78c8;
+  --background: #0f172a;
+  --card: #1e293b;
+  --border: #334155;
+  --foreground: #f8fafc;
   --muted: #94a3b8;
+
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f59e0b;
+  --secondary-foreground: #0f172a;
+
+  --accent: #f43f5e;
+  --accent-foreground: #ffffff;
 }
 
-/* Enregistrement des couleurs dans le thème Tailwind v4 */
+/* Enregistrement exhaustif des tokens Tailwind v4 */
 @theme inline {
-  /* Définition des tokens de couleur avec le préfixe --color-* */
   --color-background: var(--background);
+  --color-card: var(--card);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
   --color-muted: var(--muted);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
   /* Typographies */
   --font-sans: var(--font-geist-sans), Arial, sans-serif;

@@ -9,11 +9,9 @@ import { usePathname } from 'next/navigation'
 const links = [
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Products', href: '/products' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Calendar', href: '/calendar' },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
@@ -26,7 +24,7 @@ export default function Header() {
     }))
 
     return (
-        <Disclosure as="nav" className="relative bg-primary shadow-sm">
+        <Disclosure as="nav" className="relative bg-primary/70 shadow-sm">
             <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
                 <div className="flex h-16 justify-between">
                     <div className="flex px-2 lg:px-0">
